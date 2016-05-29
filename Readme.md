@@ -1,7 +1,7 @@
 # Личный проект «Код и Магия» [![Build status][travis-image]][travis-url] [![Dependency status][dependency-image]][dependency-url]
 
-* Студент: [Свят Шалений](https://up.htmlacademy.ru/javascript/5/user/131499).
-* Наставник: `Неизвестно`.
+* Студент: [Святослав Федоров](https://up.htmlacademy.ru/javascript/5/user/131499).
+* Наставник: [Petr Chalov](https://htmlacademy.ru/profile/id202126).
 
 ---
 
