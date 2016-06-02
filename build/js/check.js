@@ -1,4 +1,4 @@
-function getMessage(a, b) {
+var getMessage = function(a, b) {
 	if (typeof a === 'boolean') {
 			if (a) {
 				return 'Я попал в ' + b;
@@ -25,6 +25,6 @@ function getMessage(a, b) {
 			}
 		return 'Я прошёл ' + sum + ' шагов';
 	}
-}
+};
 
 getMessage();
