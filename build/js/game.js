@@ -378,18 +378,126 @@
      * Отрисовка экрана паузы.
      */
     _drawPauseScreen: function() {
+
+    var boobleFont = '16px PT Mono';
+    var boobleColor = 'white';
+    var boobleShadow = 'rgba(0, 0, 0, 0.7)';
+      
       switch (this.state.currentStatus) {
         case Verdict.WIN:
-          console.log('you have won!');
+          this.ctx.beginPath();
+          this.ctx.moveTo(310, 60);
+          this.ctx.lineTo(610, 60);
+          this.ctx.lineTo(610, 170);
+          this.ctx.lineTo(410, 170);
+          this.ctx.lineTo(340, 190);
+          this.ctx.lineTo(340, 170);
+          this.ctx.lineTo(310, 170);
+          this.ctx.closePath();
+          this.ctx.fillStyle = boobleShadow;
+          this.ctx.fill();
+          this.ctx.beginPath();
+          this.ctx.moveTo(300, 50);
+          this.ctx.lineTo(600, 50);
+          this.ctx.lineTo(600, 160);
+          this.ctx.lineTo(400, 160);
+          this.ctx.lineTo(330, 180);
+          this.ctx.lineTo(330, 160);
+          this.ctx.lineTo(300, 160);
+          this.ctx.closePath();
+          this.ctx.fillStyle = boobleColor;
+          this.ctx.fill(); 
+          this.ctx.font = boobleFont;
+          this.ctx.strokeText('Поздравляю! Ты победил!', 330, 80);
+          this.ctx.strokeText('Жми пробел, чтобы играть', 330, 100);
+          this.ctx.strokeText('еще раз!', 330, 120);
           break;
+
         case Verdict.FAIL:
-          console.log('you have failed!');
+          this.ctx.beginPath();
+          this.ctx.moveTo(310, 60);
+          this.ctx.lineTo(610, 60);
+          this.ctx.lineTo(610, 170);
+          this.ctx.lineTo(410, 170);
+          this.ctx.lineTo(340, 190);
+          this.ctx.lineTo(340, 170);
+          this.ctx.lineTo(310, 170);
+          this.ctx.closePath();
+          this.ctx.fillStyle = boobleShadow;
+          this.ctx.fill();
+          this.ctx.beginPath();
+          this.ctx.moveTo(300, 50);
+          this.ctx.lineTo(600, 50);
+          this.ctx.lineTo(600, 160);
+          this.ctx.lineTo(400, 160);
+          this.ctx.lineTo(330, 180);
+          this.ctx.lineTo(330, 160);
+          this.ctx.lineTo(300, 160);
+          this.ctx.closePath();
+          this.ctx.fillStyle = boobleColor;
+          this.ctx.fill(); 
+          this.ctx.font = boobleFont;
+          this.ctx.strokeText('Увы, ты проиграл.', 330, 80);
+          this.ctx.strokeText('Чтобы попробовать еще раз', 330, 100);
+          this.ctx.strokeText('жми пробел.', 330, 120);
           break;
+
         case Verdict.PAUSE:
-          console.log('game is on pause!');
+          this.ctx.beginPath();
+          this.ctx.moveTo(310, 60);
+          this.ctx.lineTo(610, 60);
+          this.ctx.lineTo(610, 170);
+          this.ctx.lineTo(410, 170);
+          this.ctx.lineTo(340, 190);
+          this.ctx.lineTo(340, 170);
+          this.ctx.lineTo(310, 170);
+          this.ctx.closePath();
+          this.ctx.fillStyle = boobleShadow;
+          this.ctx.fill();
+          this.ctx.beginPath();
+          this.ctx.moveTo(300, 50);
+          this.ctx.lineTo(600, 50);
+          this.ctx.lineTo(600, 160);
+          this.ctx.lineTo(400, 160);
+          this.ctx.lineTo(330, 180);
+          this.ctx.lineTo(330, 160);
+          this.ctx.lineTo(300, 160);
+          this.ctx.closePath();
+          this.ctx.fillStyle = boobleColor;
+          this.ctx.fill(); 
+          this.ctx.font = boobleFont;
+          this.ctx.strokeText('Игра на паузе!', 330, 80);
+          this.ctx.strokeText('Чтобы вернуться к игре', 330, 100);
+          this.ctx.strokeText('жми пробел!', 330, 120);
           break;
+
         case Verdict.INTRO:
-          console.log('welcome to the game! Press Space to start');
+          this.ctx.beginPath();
+          this.ctx.moveTo(310, 60);
+          this.ctx.lineTo(610, 60);
+          this.ctx.lineTo(610, 170);
+          this.ctx.lineTo(410, 170);
+          this.ctx.lineTo(340, 190);
+          this.ctx.lineTo(340, 170);
+          this.ctx.lineTo(310, 170);
+          this.ctx.closePath();
+          this.ctx.fillStyle = boobleShadow;
+          this.ctx.fill();
+          this.ctx.beginPath();
+          this.ctx.moveTo(300, 50);
+          this.ctx.lineTo(600, 50);
+          this.ctx.lineTo(600, 160);
+          this.ctx.lineTo(400, 160);
+          this.ctx.lineTo(330, 180);
+          this.ctx.lineTo(330, 160);
+          this.ctx.lineTo(300, 160);
+          this.ctx.closePath();
+          this.ctx.fillStyle = boobleColor;
+          this.ctx.fill(); 
+          this.ctx.font = boobleFont;
+          this.ctx.strokeText('Это код и магия!', 330, 80);
+          this.ctx.strokeText('Добро пожаловать!', 330, 100);
+          this.ctx.strokeText('Скорее жми пробел!', 330, 120);
           break;
       }
     },
